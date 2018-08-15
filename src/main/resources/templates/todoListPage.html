@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <h1>Todos:</h1>
+    <div style="width:50%;margin:0 auto;">
+        <div th:each="todo: ${todos}">
+            <span style="width:32%; display:inline-block;" th:text="${todo.name}"></span>
+            <span style="width:32%; display:inline-block;" th:text="${todo.room}"></span>
+            <span style="width:32%; display:inline-block;" th:text="${todo.formattedDueDate()}"></span>
+        </div>
+    </div>
+</th:block>
+</body>
+</html>
